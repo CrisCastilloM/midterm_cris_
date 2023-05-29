@@ -23,21 +23,21 @@ find_package(rclpy REQUIRED)
 find_package(Protobuf REQUIRED)
 find_package(PkgConfig REQUIRED)
 include_directories(include/interfases)
-add_library(multiplicador SHARED src/multiplicador.cpp)
+add_library(multiplier SHARED src/multiplier.cpp)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)\
 
-ament_export_targets(multiplicador HAS_LIBRARY_TARGET)
+ament_export_targets(multiplier HAS_LIBRARY_TARGET)
 
 install(
   DIRECTORY include/interfases
   DESTINATION include
 )
 
-install(TARGETS multiplicador
-    EXPORT multiplicador
+install(TARGETS multiplier
+    EXPORT multiplier
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
     RUNTIME DESTINATION bin
